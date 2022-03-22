@@ -43,7 +43,7 @@ require_once($path . '/class/product.php');
 <body>
 
     <?php
-    $product = new product();
+    $productModel = new Product();
     ?>
 
     <?php
@@ -75,7 +75,7 @@ require_once($path . '/class/product.php');
         <div class="container">
             <div class="row">
                 <?php
-                $showproductById = $product->getProductById($id_product);
+                $showproductById = $productModel->getProductById($id_product);
                 if ($showproductById) {
                     while ($result = $showproductById->fetch_assoc()) {
                 ?>

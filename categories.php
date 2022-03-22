@@ -44,8 +44,8 @@ require_once($path . '/category.php');
 
 <body>
     <?php
-    $product = new product();
-    $category = new category();
+    $productModel = new Product();
+    $categoryModel = new Category();
     ?>
 
     <!--Top bar, Header Area Start -->
@@ -113,7 +113,7 @@ require_once($path . '/category.php');
                                 <div class="tab-content">
                                     <div class="tab-pane fade show active" id="shop-grid">
                                         <div class="row mb-n-30px">
-                                            <?php $showproduct = $product->getProducts();
+                                            <?php $showproduct = $productModel->getProducts();
                                             if ($showproduct) {
                                                 while ($row = $showproduct->fetch_assoc()) {
                                             ?>
@@ -158,7 +158,7 @@ require_once($path . '/category.php');
                                         </div>
                                     </div>
                                     <div class="tab-pane fade" id="shop-list">
-                                        <?php $showproduct = $product->getProducts();
+                                        <?php $showproduct = $productModel->getProducts();
                                         if ($showproduct) {
                                             while ($row = $showproduct->fetch_assoc()) {
                                         ?>
@@ -253,7 +253,7 @@ require_once($path . '/category.php');
                             <div class="sidebar-widget-category">
                                 <ul>
                                     <?php
-                                    $showcategory = $category->getCategories();
+                                    $showcategory = $categoryModel->getCategories();
                                     if ($showcategory) {
                                         while ($row = $showcategory->fetch_assoc()) {
                                     ?>

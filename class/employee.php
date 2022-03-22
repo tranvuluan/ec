@@ -4,7 +4,7 @@ $path = realpath(dirname(__FILE__));
 require_once($path.'/config/connection.php');
 
 
-class employee{
+class Employee{
     public $conn;
     public function __construct(){
         $this->conn = getConnection();

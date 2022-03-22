@@ -29,9 +29,9 @@
                         <div class="login-content">
                             <h2>Log in</h2>
                             <h3>Log in your account</h3>
-                            <form action="formlogin">
-                                <input type="text" placeholder="Username">
-                                <input type="password" placeholder="Password">
+                            <form action="formlogin" method="POST">
+                                <input type="text" placeholder="Username" name="username">
+                                <input type="password" placeholder="Password" name="password">
                                 <div class="remember-forget-wrap">
                                     <div class="remember-wrap">
                                         <input type="checkbox">

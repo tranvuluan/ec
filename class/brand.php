@@ -3,7 +3,7 @@ $path = realpath(dirname(__FILE__));
 
 require_once($path.'/config/connection.php');
 
-class brand{
+class Brand{
     public $conn;
     public function __construct(){
         $this->conn = getConnection();

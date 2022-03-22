@@ -45,7 +45,7 @@ require_once($path . '/class/product.php')
 
 <body>
 
-    <?php $product = new product(); ?>
+    <?php $productModel = new Product(); ?>
 
     <!--Top bar, Header Area Start -->
     <?php require_once($path . '/../includes/header.php') ?>
@@ -261,7 +261,7 @@ require_once($path . '/class/product.php')
                         <!-- 1st tab start -->
                         <div class="tab-pane fade show active" id="tab-product-all">
                             <div class="row">
-                                <?php $showproduct = $product->getProducts();
+                                <?php $showproduct = $productModel->getProducts();
                                 if ($showproduct) {
                                     while ($row = $showproduct -> fetch_assoc()) {
                                 ?>
@@ -309,7 +309,7 @@ require_once($path . '/class/product.php')
                         <!-- 2st tab start -->
                         <div class="tab-pane fade show active" id="tab-product-new">
                             <div class="row">
-                                <?php $showproduct = $product->getProducts();
+                                <?php $showproduct = $productModel->getProducts();
                                 if ($showproduct) {
                                     while ($row = $showproduct -> fetch_assoc()) {
                                 ?>
@@ -359,7 +359,7 @@ require_once($path . '/class/product.php')
                         <!-- 3rd tab start -->
                         <div class="tab-pane fade" id="tab-product-bestsellers">
                             <div class="row">
-                            <?php $showproduct = $product->getProducts();
+                            <?php $showproduct = $productModel->getProducts();
                                 if ($showproduct) {
                                     while ($row = $showproduct -> fetch_assoc()) {
                                 ?>
@@ -408,7 +408,7 @@ require_once($path . '/class/product.php')
                         <!-- 4th tab start -->
                         <div class="tab-pane fade" id="tab-product-itemssale">
                             <div class="row">
-                            <?php $showproduct = $product->getProducts();
+                            <?php $showproduct = $productModel->getProducts();
                                 if ($showproduct) {
                                     while ($row = $showproduct -> fetch_assoc()) {
                                 ?>

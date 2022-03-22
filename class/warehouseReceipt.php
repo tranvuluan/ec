@@ -3,7 +3,7 @@ $path = realpath(dirname(__FILE__));
 
 require_once($path.'/config/connection.php');
 
-class warehouseReceipt{
+class WarehouseReceipt{
     public $conn;
     public function __construct(){
         $this->conn = getConnection();
